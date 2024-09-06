@@ -7,11 +7,11 @@
  */
 
 // Associate shortcode name with function
-add_shortcode( 'chsc_shortcode', 'chsc_shortcode' );
+add_shortcode( 'chess-scraper', 'chsc_show_data' );
 
 // Main function
 // Display data by section and event id set in shortcode
-function chsc_shortcode( $atts ) {
+function chsc_show_data( $atts ) {
 
     extract( shortcode_atts( array(
         'section' => 'Insert section name',
