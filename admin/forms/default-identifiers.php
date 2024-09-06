@@ -5,6 +5,9 @@
  *
  * 1. Db operations
  * 2. Form
+ * 
+ * @package Chess_Scraper
+ * @version 1.0.0
  */
 
 /*

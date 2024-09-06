@@ -2,6 +2,9 @@
 /*
  * League page in admin theme settings after submitting the form
  * Needed in forms.php file
+ * 
+ * @package Chess_Scraper
+ * @version 1.0.0
  */
 
 // Identifiers section
