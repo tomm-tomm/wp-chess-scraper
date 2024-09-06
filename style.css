@@ -1,0 +1,231 @@
+/**
+ * CSS stylesheet.
+ *
+ * @package Chess_Scraper
+ * @version 1.0.0
+ *
+ */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+1. Titles and fonts
+2. Helpers
+3. Table list
+4. Alerts
+
+/* -------------------------------------------------------------------------- */
+/*	1. Titles and fonts
+/* -------------------------------------------------------------------------- */
+
+/* --- Titles --- */
+h2.cs-title {
+	max-width: 1000px;
+	margin-bottom: 2rem;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+h3.cs-title {
+	max-width: 1000px;
+	margin: 0;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+h4.cs-title {
+	max-width: 1000px;
+	margin: 0;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	2. Helpers
+/* -------------------------------------------------------------------------- */
+
+/* --- Visibility --- */
+.hide {
+	display: none;
+}
+
+/* --- Fonts --- */
+.bold {
+	font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	3. Table list
+/* -------------------------------------------------------------------------- */
+
+/* Thanks for inspiration: https://codepen.io/lukepeters/pen/JjoVWd */
+.cs-wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+    padding: 5px 20px 20px;
+}
+
+.cs-table {
+	display: table;
+	width: 100%;
+	margin: 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cs-row {
+	display: table-row;
+	background: #f6f6f6;
+}
+
+.cs-row:nth-of-type(odd) {
+	background: #e9e9e9;
+}
+
+.cs-row.cs-header {
+	background: #444;
+	font-weight: 900;
+	color: #fff;
+}
+
+.cs-cell {
+	display: table-cell;
+	padding: 6px 12px;
+}
+
+.cs-wrapper.club-roster .cs-cell:nth-child(1) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.club-roster .cs-cell:nth-child(2) {
+	width: 50%;
+}
+
+.cs-wrapper.club-roster .cs-cell:nth-child(3) {
+	width: 42%;
+	text-align: right;
+}
+
+.cs-wrapper.league-roster .cs-cell:nth-child(1) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.league-roster .cs-cell:nth-child(2) {
+	width: 30%;
+}
+
+.cs-wrapper.league-roster .cs-cell:nth-child(3) {
+	width: 30%;
+	text-align: right;
+}
+
+.cs-wrapper.league-roster .cs-cell:nth-child(4) {
+	width: 16%;
+	text-align: right;
+}
+
+.cs-wrapper.league-roster .cs-cell:nth-child(5) {
+	width: 16%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table {
+	margin-bottom: 50px;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(1) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(2) {
+	width: 36%;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(3) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(4) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(5) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(6) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(7) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(8) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.ranking-table .cs-cell:nth-child(9) {
+	width: 8%;
+	text-align: right;
+}
+
+.cs-wrapper.fixtures {
+	margin-top: 10px;
+}
+
+.cs-wrapper.fixtures .cs-cell:nth-child(1) {
+	width: 85%;
+}
+
+.cs-wrapper.fixtures .cs-cell:nth-child(2) {
+	width: 15%;
+	text-align: right;
+}
+
+.player-profile .cs-cell {
+	width: 33.33333333%;
+}
+
+.cs-data-info {
+	font-size: 14px;
+	text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	4. Alerts
+/* -------------------------------------------------------------------------- */
+
+.cs-message {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    color: #000;
+}
+
+.cs-message.warning {
+    background: #ffb347;
+}
+
+.cs-message.error {
+    background: #d26466;
+}
+
+.cs-message.success {
+    background: #77dd77;
+}
