@@ -15,14 +15,14 @@ function chsc_create_db_tables() {
     // NOTE:
     // Some tables needs just one row
     $table_names_array = array(
-        array( 'chess_scraper_team_settings' ),
-        array( 'chess_scraper_team_roster' ),
-        array( 'chess_scraper_event_settings' ),
-        array( 'chess_scraper_event_roster' ),
-        array( 'chess_scraper_event_schedule' ),
-        array( 'chess_scraper_event_ranking' ),
-        array( 'chess_scraper_event_fixtures' ),
-        array( 'chess_scraper_event_fixtures_boards' ) );
+        'chess_scraper_team_settings',
+        'chess_scraper_team_roster',
+        'chess_scraper_event_settings',
+        'chess_scraper_event_roster',
+        'chess_scraper_event_schedule',
+        'chess_scraper_event_ranking',
+        'chess_scraper_event_fixtures',
+        'chess_scraper_event_fixtures_boards' );
 
     // Array with table columns
     $table_columns_array = array(
