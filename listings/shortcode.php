@@ -204,7 +204,7 @@ function chsc_shortcode( $atts ) {
                     } else {
                         // No rows found
                         $html .= '
-                        <div class="cs-message error">Error: No data uploaded. Upload them first.</div>';
+                        <div class="cs-message error">Error: No data uploaded. Upload it first.</div>';
                     }
 
                 }
@@ -403,7 +403,7 @@ function chsc_shortcode( $atts ) {
                     } else {
                         // No rows found
                         $html .= '
-                        <div class="cs-message error">Error: No data uploaded. Upload them first.</div>';
+                        <div class="cs-message error">Error: No data uploaded. Upload it first.</div>';
                     }
 
                 }
@@ -510,7 +510,7 @@ function chsc_shortcode( $atts ) {
                     } else {
                         // No rows found
                         $html .= '
-                        <div class="cs-message error">Error: No data uploaded. Upload them first.</div>';
+                        <div class="cs-message error">Error: No data uploaded. Upload it first.</div>';
                     }
 
                 }
@@ -630,7 +630,7 @@ function chsc_shortcode( $atts ) {
                     } else {
                         // No rows found
                         $html .= '
-                        <div class="cs-message error">Error: No data uploaded. Upload them first.</div>';
+                        <div class="cs-message error">Error: No data uploaded. Upload it first.</div>';
                     }
 
                 }

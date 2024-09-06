@@ -101,7 +101,7 @@ function chsc_admin_form_update_query_single( $db_table, $db_cols ) {
         echo '<span class="tsf-message error">Error: ' . $wpdb->last_error . '</span>';
     } else {
         // Success
-        echo '<span class="tsf-message success">Data were successfully updated.</span>';
+        echo '<span class="tsf-message success">Data was successfully updated.</span>';
     }
 
 }
@@ -276,7 +276,7 @@ function chsc_admin_form_update_query_more_rows( $db_table, $db_cols, $i ) {
                                 echo '<span class="tsf-message error">Error: ' . $wpdb->last_error . '</span>';
                             } else {
                                 // Success
-                                echo '<span class="tsf-message success">Data #' . $i . ' were successfully deleted.</span>';
+                                echo '<span class="tsf-message success">Data #' . $i . ' was successfully deleted.</span>';
 
                             }
 
@@ -297,9 +297,9 @@ function chsc_admin_form_update_query_more_rows( $db_table, $db_cols, $i ) {
                                 // Requested post data control
                                 if ( $var1_value != 0 &&
                                      $var2_value != '' ) {
-                                    echo '<span class="tsf-message success">Data #' . $i . ' are complete.</span>';
+                                    echo '<span class="tsf-message success">Data #' . $i . ' is complete.</span>';
                                 } else {
-                                    echo '<span class="tsf-message warning">Data #' . $i . ' are not complete.</span>';
+                                    echo '<span class="tsf-message warning">Data #' . $i . ' is not complete.</span>';
                                 }
 
                             }
@@ -355,9 +355,9 @@ function chsc_admin_form_update_query_more_rows( $db_table, $db_cols, $i ) {
                             // Success
                             if ( ( $var1_value == 0 ||
                                    $var2_value == '' ) ) {
-                                echo '<span class="tsf-message success">Data for team and event #' . $i . ' were successfully updated but they are not complete.</span>';
+                                echo '<span class="tsf-message success">Data for team and event #' . $i . ' was successfully updated but they are not complete.</span>';
                             } else {
-                                echo '<span class="tsf-message success">Data for team and event #' . $i . ' were successfully updated.</span>';
+                                echo '<span class="tsf-message success">Data for team and event #' . $i . ' was successfully updated.</span>';
                             }
                         }
 

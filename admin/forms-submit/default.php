@@ -25,7 +25,7 @@ if ( $_GET[ 'section' ] == 'identifiers' ) {
 
                 } else {
                     // Requested post data wasn't sent
-                    echo '<span class="tsf-message warning">Club #' . $i . ']: Both identifiers need to be filled in for the data to be downloaded.</span>';
+                    echo '<span class="tsf-message warning">Club #' . $i . ']: Both IDs need to be filled in for the data to be downloaded.</span>';
                 }
 
             }
@@ -66,7 +66,7 @@ if ( $_GET[ 'section' ] == 'identifiers' ) {
 
                 } else {
                     // If ids are null
-                    echo '<span class="tsf-message error">Error: Both ids must be filled in.</span>';
+                    echo '<span class="tsf-message error">Error: Both IDs must be filled in.</span>';
                 }
 
             }
