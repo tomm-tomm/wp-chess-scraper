@@ -31,17 +31,9 @@ function chsc_admin_settings() {
                                         'league',
                                         'chsc_admin_page_league' );
 
-    $submenu_updates = add_submenu_page( 'default',
-                                         'Updates',
-                                         'Updates',
-                                         'manage_options',
-                                         'updates',
-                                         'chsc_admin_page_updates' );
-
     // Call custom CSS for theme pages
     add_action( 'admin_print_styles-' . $submenu_default, 'chsc_custom_admin_css' );
     add_action( 'admin_print_styles-' . $submenu_league, 'chsc_custom_admin_css' );
-    add_action( 'admin_print_styles-' . $submenu_updates, 'chsc_custom_admin_css' );
 
 }
 
@@ -83,18 +75,6 @@ function chsc_admin_page_league() {
 
 }
 
-// Updates page
-function chsc_admin_page_updates() {
-    ?>
-
-    <h1><?php esc_html_e( 'Updates settings' ); ?></h1>
-
-    <?php
-    // Load import page
-    chsc_admin_load_page( 'updates' );
-
-}
-
 /*
  * Page loader
  */
@@ -105,8 +85,7 @@ function chsc_admin_load_page( $page, $section = NULL ) {
 
     // Section lists
     $section_list = array( 'default' => array( 'identifiers' => 'Identifiers' ),
-                           'league'  => array( 'identifiers' => 'Identifiers' ),
-                           'updates' => array( 'settings' => 'Settings' ) );
+                           'league'  => array( 'identifiers' => 'Identifiers' ) );
 
     // Set sections
     if ( !isset( $_GET[ 'section' ] ) ) {

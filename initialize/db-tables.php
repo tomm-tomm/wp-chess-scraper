@@ -15,15 +15,14 @@ function chsc_create_db_tables() {
     // NOTE:
     // Some tables needs just one row
     $table_names_array = array(
-        array( 'chess_scraper_team_settings', 0 ),
-        array( 'chess_scraper_team_roster', 0 ),
-        array( 'chess_scraper_event_settings', 0 ),
-        array( 'chess_scraper_event_roster', 0 ),
-        array( 'chess_scraper_event_schedule', 0 ),
-        array( 'chess_scraper_event_ranking', 0 ),
-        array( 'chess_scraper_event_fixtures', 0 ),
-        array( 'chess_scraper_event_fixtures_boards', 0 ),
-        array( 'chess_scraper_updates_allowed_ips', 1 ) );
+        array( 'chess_scraper_team_settings' ),
+        array( 'chess_scraper_team_roster' ),
+        array( 'chess_scraper_event_settings' ),
+        array( 'chess_scraper_event_roster' ),
+        array( 'chess_scraper_event_schedule' ),
+        array( 'chess_scraper_event_ranking' ),
+        array( 'chess_scraper_event_fixtures' ),
+        array( 'chess_scraper_event_fixtures_boards' ) );
 
     // Array with table columns
     $table_columns_array = array(
@@ -109,13 +108,7 @@ function chsc_create_db_tables() {
          away_player_elo int(4) NOT NULL,
          result varchar(32) NOT NULL,
          PRIMARY KEY  (id),
-         KEY fixture_id (fixture_id)',
-        /* updates_allowed_ips */
-        'id int(1) UNSIGNED NOT NULL AUTO_INCREMENT,
-         ip varchar(39) NOT NULL,
-         created_at datetime NOT NULL,
-         changed_at datetime NOT NULL,
-         PRIMARY KEY  (id)' );
+         KEY fixture_id (fixture_id)' );
 
     // Initialize WP database functions
     global $wpdb;
@@ -134,7 +127,7 @@ function chsc_create_db_tables() {
     for ( $i = 0; $i < $tables_count; $i++ ) {
 
         // Get names from arrays above
-        $table_name = $wpdb->prefix . $table_names_array[ $i ][ 0 ];
+        $table_name = $wpdb->prefix . $table_names_array[ $i ];
         $table_column = $table_columns_array[ $i ];
 
         // Create table query
@@ -145,21 +138,6 @@ function chsc_create_db_tables() {
 
         // Execute create table query
         dbDelta( $sql );
-
-        // Insert single row for some tables
-        if ( $table_names_array[ $i ][ 1 ] == 1 ) {
-
-            $wpdb->query(
-                $wpdb->prepare(
-                    "INSERT INTO $table_name
-                                ( id, created_at )
-                     VALUES ( %d, %s )",
-                            1,
-                            date( 'Y-m-d H:i:s' )
-                )
-            );
-
-        }
 
     }
 

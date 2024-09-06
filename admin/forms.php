@@ -42,10 +42,6 @@ function form_ops( $db_table, $db_cols ) {
             // This function works with db tables which have more than one row
             $query_values = chsc_admin_form_select_query_more_rows( $db_table, $db_cols, $max_league_teams_no );
             break;
-        case "updates":
-            // This function works with db tables which have one row
-            $query_values = chsc_admin_form_select_query_single( $db_table, $db_cols );
-            break;
 
     }
 
