@@ -11,8 +11,8 @@
  */
 function chsc_admin_settings() {
 
-    add_menu_page( 'Theme settings',
-                   'Theme settings',
+    add_menu_page( 'Chess Scraper',
+                   'Chess Scraper',
                    'manage_options',
                    'default',
                    'chsc_admin_page_default' );

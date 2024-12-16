@@ -454,9 +454,9 @@ function chsc_show_data( $atts ) {
                         <div class="cs-cell">#</div>
                         <div class="cs-cell">Tím</div>
                         <div class="cs-cell">Kolá</div>
-                        <div class="cs-cell">Výhry</div>
-                        <div class="cs-cell">Remízy</div>
-                        <div class="cs-cell">Prehry</div>
+                        <div class="cs-cell">V</div>
+                        <div class="cs-cell">R</div>
+                        <div class="cs-cell">P</div>
                         <div class="cs-cell">TB1</div>
                         <div class="cs-cell">TB2</div>
                         <div class="cs-cell">TB3</div>

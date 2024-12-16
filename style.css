@@ -67,14 +67,21 @@ h4.cs-title {
 .cs-wrapper {
 	max-width: 1000px;
 	margin: 0 !important;
-    padding: 5px 20px 20px;
+    padding-bottom: 50px;
 }
 
 .cs-table {
 	display: table;
-	width: 100%;
+	width: 150%;
 	margin: 0;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	overflow-x: scroll;
+}
+
+@media screen and (min-width: 800px) {
+	.cs-table {
+		width: 100%;
+	}
 }
 
 .cs-row {
