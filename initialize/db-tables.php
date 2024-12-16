@@ -66,7 +66,7 @@ function chsc_create_db_tables() {
          order_no int(4) UNSIGNED NOT NULL,
          elo int(4) UNSIGNED NOT NULL,
          games int(2) UNSIGNED NOT NULL,
-         points int(3) UNSIGNED NOT NULL,
+         points float UNSIGNED NOT NULL,
          PRIMARY KEY  (id),
          KEY event_settings_id (event_settings_id)',
          /* event_schedule */

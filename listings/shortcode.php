@@ -29,14 +29,16 @@ function chsc_show_data( $atts ) {
     $html = '';
 
     /***** Club roster *****/
-    if ( $section == 'club-roster' ) {
+    // NOTE: Doesn't work because chess.sk changed HTML structure
+
+    /*if ( $section == 'club-roster' ) {
 
         // Show non-default subpage
         if ( isset( $_GET[ 'action' ] ) ) {
 
             /*
              * Player profile
-             */
+             *//*
             if ( $_GET[ 'action' ] == 'profile' ) {
 
                 // Select player data
@@ -156,7 +158,7 @@ function chsc_show_data( $atts ) {
 
             /*
              * Team roster
-             */
+             *//*
 
              // Table header
             $html .=
@@ -197,9 +199,14 @@ function chsc_show_data( $atts ) {
                         $html .= '
                         <div class="cs-row">
                             <div class="cs-cell">' . $i . '</div>
-                            <div class="cs-cell"><a href="?action=profile&amp;fide_id=' . $fide_id . '">' . $name . '</a></div>
+                            <div class="cs-cell"><a href="https://ratings.fide.com/profile/' . $fide_id . '" target="_blank">' . $name . '</a></div>
                             <div class="cs-cell">' . $elo_standard . '</div>
                         </div>';
+
+                        // NOTE:
+                        // This is backup for link related with profile subpage
+                        // Changed because profile subpage gets data from chess.sk website and it doesn't work yet because of changed site structure
+                        // <div class="cs-cell"><a href="?action=profile&amp;fide_id=' . $fide_id . '">' . $name . '</a></div>
 
                     } else {
                         // No rows found
@@ -219,17 +226,23 @@ function chsc_show_data( $atts ) {
 
             // Source URL
             $html .= '
-            <div class="cs-data-info">Údaje sú získavané z webov <a href="https://chess.sk" target="_blank">chess.sk</a> a <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a>.</div>';
+            <div class="cs-data-info">Údaje sú získavané z webu <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a>.</div>';
 
-    } else if ( $section == 'league-roster' ) {
+            // NOTE:
+            // This is backup for link related with profile subpage
+            // Changed because profile subpage gets data from chess.sk website and it doesn't work yet because of changed site structure
+            // <div class="cs-data-info">Údaje sú získavané z webov <a href="https://chess.sk" target="_blank">chess.sk</a> a <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a>.</div>';
+
+    } else*/ if ( $section == 'league-roster' ) {
         /***** League roster *****/
 
         // Show non-default subpage
-        if ( isset( $_GET[ 'action' ] ) ) {
+        // NOTE: Doesn't work because chess.sk changed HTML structure
+        /*if ( isset( $_GET[ 'action' ] ) ) {
 
             /*
              * Player profile
-             */
+             *//*
             if ( $_GET[ 'action' ] == 'profile' ) {
 
                 // Select player data
@@ -344,11 +357,16 @@ function chsc_show_data( $atts ) {
 
                 // Source URL
                 $html .= '
-                <div class="cs-data-info">Údaje sú získavané z webov <a href="https://chess.sk" target="_blank">chess.sk</a> a <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a>.</div>';
+                <div class="cs-data-info">Údaje sú získavané z webu <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a>.</div>';
+
+                // NOTE:
+                // This is backup for link related with profile subpage
+                // Changed because profile subpage gets data from chess.sk website and it doesn't work yet because of changed site structure
+                // <div class="cs-data-info">Údaje sú získavané z webov <a href="https://chess.sk" target="_blank">chess.sk</a> a <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a>.</div>';
 
             }
 
-        } else {
+        } else {*/
             // Show default subpage
 
             /*
@@ -362,7 +380,7 @@ function chsc_show_data( $atts ) {
                     <div class="cs-row cs-header">
                         <div class="cs-cell">#</div>
                         <div class="cs-cell">Name</div>
-                        <div class="cs-cell">ELO (starting)</div>
+                        <div class="cs-cell">ELO</div>
                         <div class="cs-cell">Games</div>
                         <div class="cs-cell">Points</div>
                     </div>';
@@ -388,17 +406,22 @@ function chsc_show_data( $atts ) {
                         $order_no = $row->order_no;
                         $elo = $row->elo;
                         $games = $row->games;
-                        $points = $row->points;
+                        $points = $points_fmtd = str_replace('.',',',$row->points );
 
                         // Display data
                         $html .= '
                         <div class="cs-row">
                             <div class="cs-cell">' . $order_no . '</div>
-                            <div class="cs-cell"><a href="?action=profile&amp;fide_id=' . $fide_id . '">' . $name . '</a></div>
+                            <div class="cs-cell"><a href="https://ratings.fide.com/profile/' . $fide_id . '" target="_blank">' . $name . '</a></div>
                             <div class="cs-cell">' . $elo . '</div>
                             <div class="cs-cell">' . $games . '</div>
                             <div class="cs-cell">' . $points . '</div>
                         </div>';
+
+                        // NOTE:
+                        // This is backup for link related with profile subpage
+                        // Changed because profile subpage gets data from chess.sk website and it doesn't work yet because of changed site structure
+                        // <div class="cs-cell"><a href="?action=profile&amp;fide_id=' . $fide_id . '">' . $name . '</a></div>
 
                     } else {
                         // No rows found
@@ -414,7 +437,7 @@ function chsc_show_data( $atts ) {
                 </div>
             </div>';
 
-        }
+        //}
 
     } else if ( $section == 'league-details' ) {
         /***** League ranking table and fixtures *****/
@@ -429,11 +452,11 @@ function chsc_show_data( $atts ) {
                 <div class="cs-table">
                     <div class="cs-row cs-header">
                         <div class="cs-cell">#</div>
-                        <div class="cs-cell">Team</div>
-                        <div class="cs-cell">Games</div>
-                        <div class="cs-cell">Wins</div>
-                        <div class="cs-cell">Draws</div>
-                        <div class="cs-cell">Losses</div>
+                        <div class="cs-cell">Tím</div>
+                        <div class="cs-cell">Kolá</div>
+                        <div class="cs-cell">Výhry</div>
+                        <div class="cs-cell">Remízy</div>
+                        <div class="cs-cell">Prehry</div>
                         <div class="cs-cell">TB1</div>
                         <div class="cs-cell">TB2</div>
                         <div class="cs-cell">TB3</div>
@@ -543,14 +566,14 @@ function chsc_show_data( $atts ) {
                         // Set values
                         $round = $row->round;
                         $date = $row->date;
-                        $date = date( 'j. n. Y, g:i', strtotime( $date ) );
+                        $date = date( 'j. n. Y, H:i', strtotime( $date ) );
 
                         // Display round and date
                         $html .= '
                         <div class="cs-wrapper fixtures">
                             <div class="cs-table">
                                 <div class="cs-row cs-header">
-                                    <div class="cs-cell">Round ' . $round . ':&nbsp;&nbsp; ' . $date . '</div>
+                                    <div class="cs-cell">Kolo ' . $round . ':&nbsp;&nbsp; ' . $date . '</div>
                                     <div class="cs-cell"></div>
                                 </div>';
 

@@ -107,6 +107,7 @@ if ( $html != '' ) {
                         $fide_id = $html->find( '.CRs1', 0 )->childNodes( $j )->childNodes(5)->plaintext;
                         $games = $html->find( '.CRs1', 0 )->childNodes( $j )->childNodes(8)->plaintext;
                         $points = $html->find( '.CRs1', 0 )->childNodes( $j )->childNodes(7)->plaintext;
+                        $points_fmtd = str_replace(',','.',$points );
 
                         // Check if player exists for this event
                         $wpdb->get_row(
@@ -131,8 +132,8 @@ if ( $html != '' ) {
                                                       'order_no' => $order_no,
                                                       'elo' => $elo,
                                                       'games' => $games,
-                                                      'points' => $points ),
-                                               array( '%d', '%d', '%s', '%d', '%d', '%d', '%d' ) );
+                                                      'points' => $points_fmtd ),
+                                               array( '%d', '%d', '%s', '%d', '%d', '%d', '%f' ) );
                             }
 
                             // Check for error
