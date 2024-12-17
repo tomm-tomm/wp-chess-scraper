@@ -382,7 +382,7 @@ function chsc_show_data( $atts ) {
                         <div class="cs-cell">Meno</div>
                         <div class="cs-cell">ELO</div>
                         <div class="cs-cell">K</div>
-                        <div class="cs-cell">P</div>
+                        <div class="cs-cell">B</div>
                     </div>';
 
             // Select players data
@@ -433,8 +433,10 @@ function chsc_show_data( $atts ) {
 
             }
 
+            // Table ending and legend
             $html .= '
                 </div>
+                <div class="cs-table-legend">Poznámka: # - poradové číslo na súpiske, ELO - aktuálny rating, K - počet odohratých kôl, B - získané body</div>
             </div>';
 
         //}
@@ -540,8 +542,10 @@ function chsc_show_data( $atts ) {
 
             }
 
+            // Table ending and legend
             $html .= '
                 </div>
+                <div class="cs-table-legend">Poznámka: K - počet odohratých kôl, V - výhry, R - remízy, P - prehry, TB1/TB2/TB3 - body</div>
             </div>';
 
             /*
@@ -645,7 +649,7 @@ function chsc_show_data( $atts ) {
 
                         }
 
-                        // End table
+                        // Table ending
                         $html .= '
                             </div>
                         </div>';

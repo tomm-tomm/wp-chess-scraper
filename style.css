@@ -113,12 +113,12 @@ h4.cs-title {
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(1) {
-	width: 10%;
+	width: 6%;
 	text-align: right;
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(2) {
-	width: 40%;
+	width: 44%;
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(3) {
@@ -134,6 +134,32 @@ h4.cs-title {
 .cs-wrapper.league-roster .cs-cell:nth-child(5) {
 	width: 15%;
 	text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+	.cs-wrapper.league-roster .cs-cell:nth-child(1) {
+		width: 10%;
+		text-align: right;
+	}
+
+	.cs-wrapper.league-roster .cs-cell:nth-child(2) {
+		width: 40%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.cs-wrapper.league-roster .cs-cell:nth-child(1) {
+		width: 16%;
+		text-align: right;
+	}
+
+	.cs-wrapper.league-roster .cs-cell:nth-child(2) {
+		width: 30%;
+	}
+
+	.cs-wrapper.league-roster .cs-cell:nth-child(3) {
+		width: 24%;
+	}
 }
 
 .cs-wrapper.ranking-table {
@@ -219,6 +245,11 @@ h4.cs-title {
 
 .player-profile .cs-cell {
 	width: 33.33333333%;
+}
+
+.cs-table-legend {
+	padding-top: 20px;
+	font-size: 14px;
 }
 
 .cs-data-info {
