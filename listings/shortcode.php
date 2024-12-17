@@ -379,10 +379,10 @@ function chsc_show_data( $atts ) {
                 <div class="cs-table">
                     <div class="cs-row cs-header">
                         <div class="cs-cell">#</div>
-                        <div class="cs-cell">Name</div>
+                        <div class="cs-cell">Meno</div>
                         <div class="cs-cell">ELO</div>
-                        <div class="cs-cell">Games</div>
-                        <div class="cs-cell">Points</div>
+                        <div class="cs-cell">K</div>
+                        <div class="cs-cell">P</div>
                     </div>';
 
             // Select players data
@@ -453,7 +453,7 @@ function chsc_show_data( $atts ) {
                     <div class="cs-row cs-header">
                         <div class="cs-cell">#</div>
                         <div class="cs-cell">Tím</div>
-                        <div class="cs-cell">Kolá</div>
+                        <div class="cs-cell">K</div>
                         <div class="cs-cell">V</div>
                         <div class="cs-cell">R</div>
                         <div class="cs-cell">P</div>

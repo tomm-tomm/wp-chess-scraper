@@ -65,23 +65,17 @@ h4.cs-title {
 
 /* Thanks for inspiration: https://codepen.io/lukepeters/pen/JjoVWd */
 .cs-wrapper {
-	max-width: 1000px;
+	width: 100%;
 	margin: 0 !important;
     padding-bottom: 50px;
 }
 
 .cs-table {
 	display: table;
-	width: 150%;
+	width: 100%;
 	margin: 0;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	overflow-x: scroll;
-}
-
-@media screen and (min-width: 800px) {
-	.cs-table {
-		width: 100%;
-	}
 }
 
 .cs-row {
@@ -101,7 +95,7 @@ h4.cs-title {
 
 .cs-cell {
 	display: table-cell;
-	padding: 6px 12px;
+	padding: 6px;
 }
 
 .cs-wrapper.club-roster .cs-cell:nth-child(1) {
@@ -119,26 +113,26 @@ h4.cs-title {
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(1) {
-	width: 8%;
+	width: 10%;
 	text-align: right;
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(2) {
-	width: 30%;
+	width: 40%;
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(3) {
-	width: 30%;
+	width: 20%;
 	text-align: right;
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(4) {
-	width: 16%;
+	width: 15%;
 	text-align: right;
 }
 
 .cs-wrapper.league-roster .cs-cell:nth-child(5) {
-	width: 16%;
+	width: 15%;
 	text-align: right;
 }
 
@@ -147,12 +141,12 @@ h4.cs-title {
 }
 
 .cs-wrapper.ranking-table .cs-cell:nth-child(1) {
-	width: 8%;
+	width: 4%;
 	text-align: right;
 }
 
 .cs-wrapper.ranking-table .cs-cell:nth-child(2) {
-	width: 36%;
+	width: 40%;
 }
 
 .cs-wrapper.ranking-table .cs-cell:nth-child(3) {
@@ -190,6 +184,16 @@ h4.cs-title {
 	text-align: right;
 }
 
+@media only screen and (max-width: 600px) {
+	.cs-wrapper.ranking-table .cs-table {
+		width: 200%;
+	}
+
+	.cs-wrapper.ranking-table .cs-cell:nth-child(2) {
+		width: 30%;
+	}
+}
+
 .cs-wrapper.fixtures {
 	margin-top: 10px;
 }
@@ -201,6 +205,16 @@ h4.cs-title {
 .cs-wrapper.fixtures .cs-cell:nth-child(2) {
 	width: 15%;
 	text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+	.cs-wrapper.fixtures .cs-cell:nth-child(1) {
+		width: 70%;
+	}
+
+	.cs-wrapper.fixtures .cs-cell:nth-child(2) {
+		width: 30%;
+	}
 }
 
 .player-profile .cs-cell {
