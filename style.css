@@ -56,7 +56,7 @@ h4.cs-title {
 
 /* --- Fonts --- */
 .bold {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -89,7 +89,7 @@ h4.cs-title {
 
 .cs-row.cs-header {
 	background: #444;
-	font-weight: 900;
+	font-weight: 500;
 	color: #fff;
 }
 
